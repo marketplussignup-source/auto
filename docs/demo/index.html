@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solar Missed Call Auto-Reply Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Solar Missed Call Auto-Reply (Free Tools Demo)</h1>
+      <p>Simulate incoming missed calls, intent scoring, and auto SMS follow-up for high-income zip codes.</p>
+    </header>
+
+    <section class="card">
+      <h2>Step 1: Simulate a Missed Call</h2>
+      <form id="demo-form">
+        <label>Caller phone
+          <input id="caller-phone" type="tel" placeholder="+1234567890" required />
+        </label>
+        <label>ZIP code
+          <input id="zip" type="text" placeholder="94105" maxlength="10" required />
+        </label>
+        <label>Lead message / intent
+          <textarea id="message" rows="3" placeholder="I want a solar quote" required></textarea>
+        </label>
+        <button type="submit" id="simulate-btn">Simulate Missed Call</button>
+      </form>
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>Step 2: What this demo does</h2>
+      <ul>
+        <li>Checks ZIP against a high-income set</li>
+        <li>Runs intent scoring (keyword-based simulated model)</li>
+        <li>Decides whether to send an auto reply</li>
+        <li>Shows recommended message and CRM action</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Step 3: Deployment</h2>
+      <p>To wire into production, connect this logic to:</p>
+      <ul>
+        <li>Twilio or SignalWire webhook for real missed calls</li>
+        <li>Google Sheets / Firebase as database</li>
+        <li>Hourly Cloud Cron (Apps Script or GitHub Actions) for audits</li>
+      </ul>
+    </section>
+
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
